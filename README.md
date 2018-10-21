@@ -126,7 +126,7 @@ With the introduction of private symbols, the shadow target technique is transfo
 
 Membranes are not transparent with respect to private symbols. Given some private symbol `p` shared by objects on both sides of the membrane, property access using `p` as a key will, in general, yield different results when applied to a membrane-proxy versus the object that it wraps. Properties that are keyed with private symbols are effectively isolated to the object graph in which they are used.
 
-It is not possible for a membrane to support both both privacy and transparency at the same time. If a membrane allows privacy, then it must reject transparency: operations involving private state must be isolated to their own object graph. If a membrane is perfectly transparent, then it cannot support privacy: operations involving supposedly "private" keys would have to be intercepted by, and leaked to, the proxy.
+It is not possible for a membrane to support both privacy and transparency at the same time. If a membrane allows privacy, then it must reject transparency: operations involving private state must be isolated to their own object graph. If a membrane is perfectly transparent, then it cannot support privacy: operations involving supposedly "private" keys would have to be intercepted by, and leaked to, the proxy.
 
 ### __*Can private symbols be used for branding?*__
 
